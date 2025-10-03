@@ -4,3 +4,5 @@
 # Ignorar todos los archivos .zip
 *.zip
 
+# Ignorar el entorno virtual de Python
+.venv/
