@@ -1,5 +1,5 @@
 # Ignorar todos los archivos .csv
-*.csv
+#*.csv
 
 # Ignorar todos los archivos .zip
 *.zip
