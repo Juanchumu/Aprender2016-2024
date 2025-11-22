@@ -24,8 +24,8 @@ import pandas as pd
 #model_lengua = joblib.load("/home/juan/virtual-env/UNLu/AA/2/Aprender2016-2024/streamlit/modelo_lengua.pkl")
 
 #Para utilizar en streamlit
-model_matematica = joblib.load("/mount/src/Aprender2016-2024/streamlit/modelo_matematica.pkl")
-model_lengua = joblib.load("/mount/src/Aprender2016-2024/streamlit/modelo_lengua.pkl")
+model_matematica = joblib.load("/mount/src/aprender2016-2024/streamlit/modelo_matematica.pkl")
+model_lengua = joblib.load("/mount/src/aprender2016-2024/streamlit/modelo_lengua.pkl")
 
 # Título general
 st.title("Aprender 2016-2024")
