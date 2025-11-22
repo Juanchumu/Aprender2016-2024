@@ -1,13 +1,17 @@
-import streamlit as st
-import joblib
-import pandas as pd
 
 # Install streamlit if not already installed
-#try:
-#    import streamlit as st
-#except ImportError:
-    #!pip install streamlit
-    #import streamlit as st
+try:
+    import streamlit as st
+    import joblib
+    import pandas as pd
+
+except ImportError:
+    !pip install streamlit
+    !pip install joblib
+    !pip install pandas
+    import streamlit as st
+    import joblib
+    import pandas as pd
     
 # Cargar el modelo
 
