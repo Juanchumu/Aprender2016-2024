@@ -10,11 +10,14 @@ import pandas as pd
     #import streamlit as st
     
 # Cargar el modelo
-# Ensure these paths are correct and accessible
-model_matematica = joblib.load("/home/juan/virtual-env/UNLu/AA/2/Aprender2016-2024/streamlit/modelo_matematica.pkl")
-model_lengua = joblib.load("/home/juan/virtual-env/UNLu/AA/2/Aprender2016-2024/streamlit/modelo_lengua.pkl")
-#model_matematica = joblib.load("/mount/src/tplabdatos/streamlit/modelo_matematica.pkl")
-#model_lengua = joblib.load("/mount/src/tplabdatos/streamlit/modelo_lengua.pkl")
+
+# Para utilizar localmente:
+#model_matematica = joblib.load("/home/juan/virtual-env/UNLu/AA/2/Aprender2016-2024/streamlit/modelo_matematica.pkl")
+#model_lengua = joblib.load("/home/juan/virtual-env/UNLu/AA/2/Aprender2016-2024/streamlit/modelo_lengua.pkl")
+
+#Para utilizar en streamlit
+model_matematica = joblib.load("/mount/src/Aprender2016-2024/streamlit/modelo_matematica.pkl")
+model_lengua = joblib.load("/mount/src/Aprender2016-2024/streamlit/modelo_lengua.pkl")
 
 # Título general
 st.title("Aprender 2016-2024")
