@@ -257,7 +257,7 @@ with tab3:
         if (prediccion_lengua > 0):
             texto_lengua ="Satisfactorio"
 
-    st.success(f"Predicción rendimiento matemática: {texto_mate}")
-    st.success(f"Predicción rendimiento lengua: {texto_lengua}")
+        st.success(f"Predicción rendimiento matemática: {texto_mate}")
+        st.success(f"Predicción rendimiento lengua: {texto_lengua}")
 
-    st.caption("El modelo alcanza un accuracy del 81%.")
+        st.caption("El modelo alcanza un accuracy del 81%.")
