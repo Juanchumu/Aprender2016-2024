@@ -16,7 +16,7 @@ import pandas as pd
 #    import streamlit as st
 #    import joblib
 #    import pandas as pd
-    
+
 # Cargar el modelo
 
 # Para utilizar localmente:
@@ -39,7 +39,7 @@ tab1, tab2, tab3 = st.tabs([
     "1️⃣ Carga de Datos",
     "2️⃣ Revisión de Datos",
     "3️⃣ Predicción"
-])
+    ])
 
 # ===================== TAB 1 =====================
 with tab1:
@@ -245,7 +245,7 @@ with tab3:
         input_df = pd.DataFrame([datos])
 
     if st.button("Predecir valor de rendimiento"):
-    prediccion_matematica = model_matematica.predict(input_df)[0]
+        prediccion_matematica = model_matematica.predict(input_df)[0]
     prediccion_lengua = model_lengua.predict(input_df)[0]
 
     # Convertir predicciones a texto
