@@ -245,17 +245,17 @@ with tab3:
         input_df = pd.DataFrame([datos])
     prediccion_lengua = 0
     prediccion_matematica = 0
+    texto_mate = "Por debajo del nivel" 
+    texto_lengua = "Por debajo del nivel" 
     if st.button("Predecir valor de rendimiento"):
         prediccion_matematica = model_matematica.predict(input_df)[0]
         prediccion_lengua = model_lengua.predict(input_df)[0]
 
         # Convertir predicciones a texto
-    texto_mate = "Por debajo del nivel" 
-    if (prediccion_matematica == 1):
-        texto_mate = "Satisfactorio"
-    texto_lengua = "Por debajo del nivel" 
-    if (prediccion_lengua == 1):
-        texto_lengua ="Satisfactorio"
+        if (prediccion_matematica > 0):
+            texto_mate = "Satisfactorio"
+        if (prediccion_lengua > 0):
+            texto_lengua ="Satisfactorio"
 
     st.success(f"Predicción rendimiento matemática: {texto_mate}")
     st.success(f"Predicción rendimiento lengua: {texto_lengua}")
