@@ -244,15 +244,15 @@ with tab3:
         # Fallback to the original less robust method if feature_names_in_ is not available
         input_df = pd.DataFrame([datos])
 
-    if st.button("Predecir valor de rendimiento"):
-    prediccion_matematica = model_matematica.predict(input_df)[0]
-    prediccion_lengua = model_lengua.predict(input_df)[0]
+    	if st.button("Predecir valor de rendimiento"):
+    	prediccion_matematica = model_matematica.predict(input_df)[0]
+    	prediccion_lengua = model_lengua.predict(input_df)[0]
 
-    # Convertir predicciones a texto
-    texto_mate = "Por debajo del nivel" if prediccion_matematica == 0 else "Satisfactorio"
-    texto_lengua = "Por debajo del nivel" if prediccion_lengua == 0 else "Satisfactorio"
+    	# Convertir predicciones a texto
+    	texto_mate = "Por debajo del nivel" if prediccion_matematica == 0 else "Satisfactorio"
+    	texto_lengua = "Por debajo del nivel" if prediccion_lengua == 0 else "Satisfactorio"
 
-    st.success(f"Predicción rendimiento matemática: {texto_mate}")
-    st.success(f"Predicción rendimiento lengua: {texto_lengua}")
+    	st.success(f"Predicción rendimiento matemática: {texto_mate}")
+    	st.success(f"Predicción rendimiento lengua: {texto_lengua}")
 
-    st.caption("El modelo alcanza un accuracy del 81%.")
+    	st.caption("El modelo alcanza un accuracy del 81%.")
