@@ -251,10 +251,10 @@ with tab3:
     # Convertir predicciones a texto
     texto_mate = "Por debajo del nivel" 
     if (prediccion_matematica == 1):
-    	texto_mate = "Satisfactorio"
+        texto_mate = "Satisfactorio"
     texto_lengua = "Por debajo del nivel" 
     if (prediccion_lengua == 1):
-    	texto_lengua ="Satisfactorio"
+        texto_lengua ="Satisfactorio"
 
     st.success(f"Predicción rendimiento matemática: {texto_mate}")
     st.success(f"Predicción rendimiento lengua: {texto_lengua}")
