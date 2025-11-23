@@ -194,8 +194,8 @@ with tab1:
     datos['Nivel_Ed_Madre_Blanco'] = st.number_input('Madre: Blanco (Nivel Educativo)', 1.0, 15793.0, 1.0)
 
     st.subheader('Ubicacion')
-    datos['lat'] = st.number_input('Latitud', 1.0, 15793.0, 1.0)
-    datos['lon'] = st.number_input('Longitud', 1.0, 15793.0, 1.0)
+    datos['lat'] = st.number_input('Latitud', -54.807306, -21.9470472, -34.577636)
+    datos['lon'] = st.number_input('Longitud', -72.4188019, -54.0378533, -59.087643)
 
     st.subheader('Sobre-edad')
     datos['sobreedad_1_año_de_sobreedad_18_años_al_30_de_junio'] = st.number_input('1 año de sobreedad (18 años al 30 de junio)', 1.0, 15793.0, 1.0)
@@ -245,8 +245,14 @@ with tab3:
         input_df = pd.DataFrame([datos])
 
     if st.button("Predecir valor de rendimiento"):
-        prediccion_matematica = model_matematica.predict(input_df)[0]
-        prediccion_lengua = model_lengua.predict(input_df)[0]
-        st.success(f"Predicción del rendimiento matematica: {prediccion_matematica:,.2f}")
-        st.success(f"Predicción del rendimiento lengua: {prediccion_lengua:,.2f}")
-        st.caption("El modelo alcanza un accuracy del 81%.")
+    prediccion_matematica = model_matematica.predict(input_df)[0]
+    prediccion_lengua = model_lengua.predict(input_df)[0]
+
+    # Convertir predicciones a texto
+    texto_mate = "Por debajo del nivel" if prediccion_matematica == 0 else "Satisfactorio"
+    texto_lengua = "Por debajo del nivel" if prediccion_lengua == 0 else "Satisfactorio"
+
+    st.success(f"Predicción rendimiento matemática: {texto_mate}")
+    st.success(f"Predicción rendimiento lengua: {texto_lengua}")
+
+    st.caption("El modelo alcanza un accuracy del 81%.")
