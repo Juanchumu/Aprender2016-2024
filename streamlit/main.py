@@ -243,10 +243,11 @@ with tab3:
         st.warning("Could not retrieve feature names from the loaded model. Ensuring all inputs are present might be necessary for correct prediction.")
         # Fallback to the original less robust method if feature_names_in_ is not available
         input_df = pd.DataFrame([datos])
-
-    #if st.button("Predecir valor de rendimiento"):
-    prediccion_matematica = model_matematica.predict(input_df)[0]
-    prediccion_lengua = model_lengua.predict(input_df)[0]
+    prediccion_lengua = 0
+    prediccion_matematica = 0
+    if st.button("Predecir valor de rendimiento"):
+        prediccion_matematica = model_matematica.predict(input_df)[0]
+        prediccion_lengua = model_lengua.predict(input_df)[0]
 
         # Convertir predicciones a texto
     texto_mate = "Por debajo del nivel" 
