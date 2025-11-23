@@ -31,7 +31,7 @@ model_lengua = joblib.load("/mount/src/aprender2016-2024/streamlit/modelo_lengua
 st.title("Aprender 2016-2024")
 st.markdown("Esta aplicación permite estimar el valor de rendimiento academico en base a encuesta sobre su vida")
 st.markdown("Alumnos:")
-st.markdown(" Patrick - Bruno - Juan Jara")
+st.markdown(" Patrick Murayari - Bruno Weiss - Juan Jara")
 
 
 # Tabs
