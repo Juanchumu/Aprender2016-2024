@@ -8,16 +8,16 @@
 #### Fecha de inicio: 01/09/25
 
 #### Organización: Universidad Nacional de Luján
-### Materia: Aprendisaje Automatico
+### Materia: Aprendizaje Automatico
 
 
 
-enlace a colab modelado:
-https://colab.research.google.com/drive/1qpRfe-2AKlWWSW1-I6y8tQEbHuTI8rLp?usp=sharing
+Enlace a colab modelado:
+* https://colab.research.google.com/drive/1qpRfe-2AKlWWSW1-I6y8tQEbHuTI8rLp?usp=sharing
 
 # Streamlit
 
-* enlace a streamlit:
+Enlace a streamlit:
 * https://aprender2016-2024-aprendizaje-automatico-2025.streamlit.app/
 
 ### Simulación del uso del sistema
